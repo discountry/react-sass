@@ -137,6 +137,8 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          // Add .scss to exclude array
+          /\.scss$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -209,6 +211,11 @@ module.exports = {
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.
+      {
+        test: /\.scss$/,
+        include: paths.appSrc,
+        loaders: [require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('sass-loader')]
+      }
     ],
   },
   plugins: [

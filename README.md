@@ -1,5 +1,11 @@
 # react-sass
 
+## 安装依赖
+
+```bash
+npm install sass-loader node-sass --save-dev
+```
+
 ## 改动部分
 
 ### webpack.config.dev.js
